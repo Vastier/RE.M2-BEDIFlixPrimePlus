@@ -1,3 +1,4 @@
+/* CSS da Home: { */
 
 body, main{
     background-color: black;
@@ -123,7 +124,55 @@ header .btn-primary:hover{
  
 
 
+/* } Fim do CSS da Home */
 
 
+/* Inicio do CSS da Página de Contatos e de Inscrição do Usuário: */
 
+
+/* Mudado o valor da altura de 1400px pra 100% da altura do viewport do usuário para ser mais responsivo, problema agora é que o fundo quebra quanto a tela do usuário tem a largura menor que 768px*/
+.introducao{
+	background-image: url(../img/fundo-flix-darker.jpg) ;
+	background-size: cover;
+	width: 100%;
+	height: 100vh; 
+}
+
+.form-cadastro{
+	max-width: 650px;
+	margin: 0 auto;
+	background: #0d6efd;
+	opacity: 80%;
+	color: white;
+	border-radius: 10px;
+}
+.card-largura{
+	max-width: 18rem;
+}
+.tamanho-card{
+	object-fit: cover;
+	height: 180px;
+}
+.icone-card{
+	max-width: 40px;
+	max-height: 40px;
+}
+.borda-card{
+	border-color:#0d6efd;
+}
+.input:invalid{
+	border-color: crimson;
+	box-shadow: 0px 0px 3px crimson;
+}
+.input:focus{
+	outline: none;
+}
+.input:focus:invalid{
+	box-shadow: none;
+}
+/*  
+##################### Código comentado por estar mudando cor de coisa que não deve (a frase 'pronto para assistir? faça sua assinatura' na home). 
+span{
+	color: crimson;
+} */
 
