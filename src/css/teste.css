@@ -1,0 +1,41 @@
+body {
+  background-color: #fff;
+  color: black;
+}
+
+img {
+  width: 300px;
+  height: 300px;
+}
+
+
+.filme_info {
+    background-color: #171717;
+    padding: 10px;
+    height: 80px;
+    width: 100%;
+    transform: scale(0);
+  } 
+
+  .filme:hover .filme_info {
+    transform: scale(1);
+    transition: 0.5s;
+    color: blanchedalmond;
+  }
+
+#infoFilme {
+  display: none;
+  background-color: black;
+  color: blanchedalmond;
+  margin: 0;
+  height: 80%;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#infoContainer{
+    width: 50%;
+}
+
+
