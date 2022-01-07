@@ -1,11 +1,11 @@
 class FilmesModel {
     
-//        /**
-//      * 
-//      * @param {string} url Uma string com a URL para fazer o pedido, use geraURL.
-//      * @param {Function} cbSucesso Uma função de callback pra lidar com o filme recebido.
-//      * @param {Function} cbErro Uma callback para lidar com o erro caso dê ruim.
-//      */
+    
+      
+    //   @param {string} url Uma string com a URL para fazer o pedido, use geraURL.
+    //   @param {Function} cbSucesso Uma função de callback pra lidar com o filme recebido.
+    //   @param {Function} cbErro Uma callback para lidar com o erro caso dê ruim.
+     
 //     pegaFilmes( url, cbSucesso, cbErro ) {
 //         const parametros = {
 //             url: url,
@@ -63,6 +63,6 @@ class FilmesModel {
 //         this.notaIMDB = notaIMDB
 //     }
 
-// }
+}
 
 
