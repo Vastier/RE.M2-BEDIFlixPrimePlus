@@ -1,0 +1,43 @@
+Documento de referência para comandos do Git que eu usei.
+
+Instruções Iniciais do Github para referência
+		…or create a new repository on the command line
+
+		echo "# RE.M2-BEDIFlixPrimePlus" >> README.md
+		git init
+		git add README.md
+		git commit -m "first commit"
+		git branch -M main
+		git remote add origin git@github.com:Vastier/RE.M2-BEDIFlixPrimePlus.git
+		git push -u origin main
+
+		…or push an existing repository from the command line
+
+		git remote add origin git@github.com:Vastier/RE.M2-BEDIFlixPrimePlus.git
+		git branch -M main
+		git push -u origin main
+
+Criando outra branch:
+
+		git checkout -b codigo_inicial_diego
+
+O código acima cria uma nova branch chamada codigo_inicial_diego e 'se muda' para ela.
+
+		git push -u origin codigo_inicial_diego
+
+Depois de criar e estar na branch é só subir o código para ela.
+
+Para voltar pra branch Main depois é só tacar:
+
+		git branch -M main
+
+
+		git checkout -b codigo_inicial_bernardo
+		git push -u origin codigo_inicial_bernardo
+
+
+
+		git checkout -b codigo_inicial_edson
+		git push -u origin codigo_inicial_edson
+
+
