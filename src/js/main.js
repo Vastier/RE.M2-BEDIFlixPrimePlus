@@ -1,31 +1,30 @@
 
+
+/**
+ * Função que é rodada após o documento ser carregado.
+ */
 $( document ).ready(function() {
-   console.log('Tudo carregado e ok na Main por enquanto.');
+    console.log('Tudo carregado e ok na Main por enquanto.');
 
-
-
-//    Hackeadamente usando o Jquery pra fazer o pedido e ajustando pra funcionar, remodelar futuramente para o modelo MVC
-    $('#inputCep').on('keyup', async function(){
-
+    
+    /**
+     * Toda vez que alguma tecla for apertada com o campo Cep selecionado checa se tem 8 digitos, caso tenha faz o pedido para a controller resolver o Cep (Resolver = criar link, fazer pedido usando o link e preencher os campos do formulário de acordo com a resposta)
+     */
+    $('#inputCep').on('keyup', async ()=>{
         const inputCep = $('#inputCep')[0]
-        
-        if(inputCep.value.length === 8){
+        const usuarios = new UsuariosController
 
-            const cep = inputCep.value
-            const url = `https://viacep.com.br/ws/${cep}/json/`
-            $.get(url, (data) => {
-                
-                $('#inputCidade').val(data.localidade)
-                $('#inputRua').val(data.logradouro)
-                $('#inputBairro').val(data.bairro)
-                $('#inputEstado').val(data.uf)
+        if (inputCep.value.length === 8) {
+            
+            usuarios.resolveCep(inputCep.value);
 
-            }) // < Jquery callback de sucesso.
-        } // < InputCep.On.Keyup
+        } // <- if inputCep
 
-    })
+        } // <- callback quando dá certo
 
-}) // << - Document.ready function
+    ) // <- InputCep.On.Keyup 
+
+})  // << - Document.ready function
 
 // ##### main.js da page de cadastro {
 
