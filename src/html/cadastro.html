@@ -55,7 +55,7 @@
 
     <section class="form-cadastro p-3">
       <form class="row g-3 p-3">
-        <h2 class="text-light">Cadastre-se e assista as melhores séries e filmes</h2>
+        <h2 class="text-light text-center">Cadastre-se e assista as melhores séries e filmes</h2>
         <div class="col">
           <div class="col-12">
               <label for="inputNome" class="form-label">Nome Completo</label>
@@ -63,22 +63,28 @@
             </div>
           <div class="col-md-12">
             <label for="inputEmail" class="form-label">E-mail</label>
-            <input type="email" onblur="validarEmail()" onfocus="redefinirMsg()" class="form-control" id="inputEmail" placeholder="Digite seu email" >
+            <input type="email" class="form-control" id="inputEmail" placeholder="Digite seu email" >
             <span id="error-email"></span>
           </div>
           <div class="col-md-12">
             <label for="inputSenha" class="form-label">Senha</label>
-            <input type="password" class="form-control" id="inputSenha" placeholder="Digite sua senha" onblur="validarSenha()">
+            <input type="password" class="form-control" id="inputSenha" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Digite sua senha" >
             <span id="error-senha"></span>
           </div>
           <div class="col-md-12">
             <label for="inputConfirmSenha" class="form-label">Confirme sua Senha</label>
-            <input type="password" class="form-control" id="inputConfirmSenha" placeholder="Digite sua senha" onblur="validarSenha()">
-            <span id="senhaNaoConfere"></span>
+            <input type="password" class="form-control" id="inputConfirmaSenha" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Digite sua senha">
+            <span id="senhaNaoConfere"><b>Senhas não conferem!</b></span>
           </div>
-          <div class="col-12 pt-4 mt-2">
-            <button type="button" class="btn btn-light text-primary" id="login">Cadastrar</button>
+          <div id="validasenha" class="col-md-12">
+            <br>
+            <p>Sua senha deve conter:</p>
+            <p id='senhaletralower' class='invalido'>Uma letra <b>minúscula</b>.</p>
+            <p id='senhaletracaps' class='invalido'>Uma letra <b>maiúscula</b>.</p>
+            <p id='senhanumero' class='invalido'>Um <b>número</b>.</p>
+            <p id='senhatamanho' class='invalido'>Pelo menos <b>8 caracteres</b>.</p>
           </div>
+
         </div>
         <div class="col">
           <div class="col-md-12">
@@ -105,7 +111,9 @@
             <label for="inputCep" class="form-label">Cep</label>
             <input type="text" class="form-control" id="inputCep">
           </div>
-
+          <div class="col-12 pt-4 mt-2">
+            <button type="button" class="btn btn-light text-primary" id="login">Cadastrar</button>
+          </div>
         </div>
         
       </form>

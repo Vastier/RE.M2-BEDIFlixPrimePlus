@@ -170,6 +170,37 @@ header .btn-primary:hover{
 .input:focus:invalid{
 	box-shadow: none;
 }
+
+
+/* CSS dos Requerimentos de senha { */
+
+#senhaNaoConfere {
+    display: none;
+    color: crimson;
+}
+
+/* Adiciona uma cor verde e um check caso os requerimentos sejam cumpridos*/
+.valido {
+    color: #54E346;
+}
+
+.valido:before {
+    content: "\2713  ";
+}
+
+/* Deixa a cor vermelha e um X caso os requerimentos não sejam cumpridos */
+.invalido {
+    color: crimson;
+  }
+  
+  .invalido:before {
+    content: "\2613  ";
+  }
+
+
+
+/* } Fim dos CSS dos Requerimentos de senha */
+
 /*  
 ##################### Código comentado por estar mudando cor de coisa que não deve (a frase 'pronto para assistir? faça sua assinatura' na home). 
 span{

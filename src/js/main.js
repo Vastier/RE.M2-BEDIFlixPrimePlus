@@ -6,6 +6,25 @@
 $( document ).ready(function() {
     console.log('Tudo carregado e ok na Main por enquanto.');
 
+    /**
+     * Validação de senha:
+     */
+    const campoSenha = $('#inputSenha')
+    campoSenha.on('keyup', ()=>{
+        const usrController = new UsuariosController
+        usrController.validaSenha()
+    })
+    /**
+     * Valida confirmação de senha
+     */
+    const confirmaSenha = $('#inputConfirmaSenha')
+    confirmaSenha.on('keyup', ()=>{
+        const usrController = new UsuariosController
+        usrController.validaConfirmaSenha()
+    })
+
+
+
     
     /**
      * Toda vez que alguma tecla for apertada com o campo Cep selecionado checa se tem 8 digitos, caso tenha faz o pedido para a controller resolver o Cep (Resolver = criar link, fazer pedido usando o link e preencher os campos do formulário de acordo com a resposta)

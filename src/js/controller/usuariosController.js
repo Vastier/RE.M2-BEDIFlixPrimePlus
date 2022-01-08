@@ -17,7 +17,54 @@ class UsuariosController {
 	}	// <- resolveCep
 
 	
+	validaSenha() {
+		const campoSenha = $('#inputSenha'),
+			  confirmaSenha = $('#inputConfirmaSenha')
+		
+		const usrView = new UsuariosView
+        // validar minúsculas 
+        const minusculas = /[a-z]/g;
+        if (campoSenha[0].value.match(minusculas)) {
+            usrView.validaMin(true)
+        } else {
+            usrView.validaMin(false)
+        }
+		// valida maiúsculas
+        const maiusculas = /[A-Z]/g;
+        if (campoSenha[0].value.match(maiusculas)) {
+            usrView.validaMai(true)
+        } else {
+            usrView.validaMai(false)
+        }
+		// valida números
+        const numeros = /[0-9]/g;
+        if (campoSenha[0].value.match(numeros)) {
+            usrView.validaNum(true)
+        } else {
+            usrView.validaNum(false)
+        }
+		// valida tamanho
+        if (campoSenha[0].value.length >= 8) {
+            usrView.validaLen(true)
+        } else {
+            usrView.validaLen(false)
+        }
 
+	}
+
+	validaConfirmaSenha(){
+		const campoSenha = $('#inputSenha'),
+			  confirmaSenha = $('#inputConfirmaSenha')
+
+		const usrView = new UsuariosView
+
+			  // valida confirmação
+        if (campoSenha[0].value === confirmaSenha[0].value) {
+            usrView.validaConfirma(true)
+        } else {
+            usrView.validaConfirma(false)
+        }
+	}
 	
 
 
