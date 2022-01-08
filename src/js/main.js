@@ -13,6 +13,7 @@ $( document ).ready(function() {
     campoSenha.on('keyup', ()=>{
         const usrController = new UsuariosController
         usrController.validaSenha()
+        usrController.validaConfirmaSenha()
     })
     /**
      * Valida confirmação de senha
